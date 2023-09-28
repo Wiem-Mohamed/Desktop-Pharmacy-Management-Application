@@ -1,0 +1,46 @@
+.left-side{
+      -fx-background-color:#b0d7db;
+      -fx-alignment: center;
+      -fx-justify-content: center;
+}
+.mainContainer{
+      -fx-background-color:white;
+}
+
+.right-side{
+      -fx-background-color:white;
+      -fx-background-radius: 30;
+      -fx-border-width: 1;
+      -fx-border-color: #ccc;
+}
+
+.logo{
+     padding:50;
+}
+
+.userName{
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+    -fx-border-color: #CCCCCC;
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+}
+.loginBtn{
+    -fx-background-color: #3ea437;
+      -fx-justify-content: center;
+}
+
+.signUp {
+  -fx-border-style: solid inside;
+  -fx-border-width: 0 0 1 0;
+  -fx-border-color: black;
+}
+.signUp:hover {
+    -fx-cursor: hand;
+    -fx-text-fill:#0a6fa3;
+    -fx-border-color: #0a6fa3;
+}
+
+
+

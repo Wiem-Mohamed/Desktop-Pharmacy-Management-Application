@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="sideBarContainer" prefHeight="482.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hotelmanagmet.SupplierController">
+   <children>
+      <AnchorPane fx:id="supplierContainer" layoutX="-3.0" prefHeight="482.0" prefWidth="655.0">
+         <children>
+            <VBox layoutX="7.0" prefHeight="482.0" prefWidth="655.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="646.0">
+                     <children>
+                        <Label alignment="CENTER" lineSpacing="3.0" prefHeight="60.0" prefWidth="655.0" styleClass="login-title" stylesheets="@test.css" text="Supplier" textAlignment="CENTER" textFill="#0a6fa3">
+                           <font>
+                              <Font name="Arial Bold" size="26.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="174.0" prefWidth="655.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-border-color: #eee; -fx-border-width: 5; -fx-border-radius: 10;">
+                     <children>
+                        <VBox prefHeight="174.0" prefWidth="234.0">
+                           <children>
+                              <GridPane prefHeight="169.0" prefWidth="234.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="113.60003662109375" minWidth="10.0" prefWidth="102.4" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.199951171875" minWidth="110.39996337890625" prefWidth="122.4" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="34.0" prefWidth="142.0" text="Supplier ID :" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="143.0" text="Name :" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="34.0" prefWidth="152.0" text="Address :" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="29.0" prefWidth="110.0" text="Contact :" GridPane.rowIndex="4">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="name" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <TextField fx:id="address" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="contact" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="75.0" />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox alignment="TOP_RIGHT" prefHeight="174.0" prefWidth="171.0">
+                           <children>
+                              <GridPane prefHeight="92.0" prefWidth="171.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Button fx:id="add" alignment="CENTER" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0a6fa3;" text="Add" onAction="#addsupplier" textFill="#fffffff5">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="update" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #3ea437;" text="Update" textFill="WHITE" onAction="#updatesupplier" GridPane.columnIndex="1">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="clear" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #3ea437;" text="Clear" textFill="WHITE" onAction="#cleartextfields" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                    </Button>
+                                    <Button fx:id="delete" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" style="-fx-background-color: #0a6fa3;" text="Delete" textFill="WHITE" GridPane.columnIndex="1"  onAction="#deletesupplier" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="Arial Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="20.0" />
+                                 </VBox.margin>
+                              </GridPane>
+                           </children>
+                           <HBox.margin>
+                              <Insets left="78.0" />
+                           </HBox.margin>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="10.0" right="5.0" top="10.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+                  <VBox prefHeight="281.0" prefWidth="651.0" style="-fx-background-radius: 15; -fx-border-color: #eee; -fx-border-width: 5; -fx-border-radius: 10; -fx-background-color: white;">
+                     <children>
+                        <TextField fx:id="cherchers" maxWidth="260.0" prefHeight="26.0" prefWidth="200.0" onKeyReleased="#handleSearchTextField" promptText="Search">
+                           <VBox.margin>
+                              <Insets bottom="10.0" left="7.0" top="2.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <TableView fx:id="tableview" prefHeight="226.0" prefWidth="627.0" styleClass="tableHeader">
+                           <columns>
+                              <TableColumn fx:id="idColumn" prefWidth="163.20001202821732"  text="Suplier ID" />
+                              <TableColumn fx:id="nameColumn" prefWidth="148.80003356933594"  text="Name" />
+                              <TableColumn fx:id="addressColumn" minWidth="0.0" prefWidth="149.5999755859375"  text="Address" />
+                              <TableColumn fx:id="contactColumn" prefWidth="181.5999755859375"  text="Contact" />
+                           </columns>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets top="5.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets bottom="3.0" right="5.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
